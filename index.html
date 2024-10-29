@@ -1,7 +1,303 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EyeSight">
+  <meta name="keywords" content="EyeSight, Robotics, Robot Learning, Dexterous Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EyeSight Hand: Design of a Fully-Actuated Dexterous Robot Hand with Integrated Vision-Based Tactile Sensors and Compliant Actuation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EyeSight Hand: Design of a Fully-Actuated Dexterous Robot Hand with Integrated Vision-Based Tactile Sensors and Compliant Actuation</h1>
+          <h4 class="title is-4 conference">IROS 2024</h4>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Branden Romero</a><sup>*</sup>,</span>
+
+            <span class="author-block">
+              <a href="https://fang-haoshu.github.io/">Hao-Shu Fang</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a>Edward Adelson</a><sup></sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Massachusetts Institute of Technology</span>          <div class="is-size-5 publication-authors">
+            <span class="author-block">(* = Equal Contribution, <a href="mailto:brromero@mit.edu">brromero@mit.edu</a>, <a href="mailto:fhaoshu@gmail.com">fhs@mit.edu</a>)</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2408.06265"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <iframe width="965" height="562" src="https://www.youtube.com/embed/o2ZjYylV4Ew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="abstract">Abstract</a></h2>
+        <div class="content has-text-justified">
+          <p> In this work, we introduce the EyeSight Hand, a novel 7 degrees of freedom (DoF) humanoid hand featuring integrated vision-based tactile sensors tailored for enhanced whole-hand manipulation. Additionally, we introduce an actuation scheme centered around quasi-direct drive actuation to achieve human-like strength and speed while ensuring robustness for large-scale data collection. We evaluate the EyeSight Hand on three challenging tasks: bottle opening, plasticine cutting, and plate pick and place, which require a blend of complex manipulation, tool use, and precise force application. Imitation learning models trained on these tasks, with a novel vision dropout strategy, showcase the benefits of tactile feedback in enhancing task success rates. Our results reveal that the integration of tactile sensing dramatically improves task performance, underscoring the critical role of tactile information in dexterous manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="airexo">Actuation</a></h2>
+        
+        <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/hand_design.png"></img>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/snatch.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/weight.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="airexo">Tactile Sensing</a></h2>
+        
+        <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/tactile_design.png" style="width: 50%; height: auto; display: block; margin: 0 auto"></img>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/tactile.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        
+	  <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/tactile_simulation.png"></img>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="learning-itw">Evaluation</a></h2>
+          <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/architecture.png"></img>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/ketchup.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/plates.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/knife.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="learning-itw">Results</a></h2>
+          <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/results.png"></img>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/ketchup_ex1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/ketchup_ex2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/plate_ex1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/plate_ex2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/knife_ex1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/knife_ex2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+    <h2 class="title">BibTeX</h2>
+    </div>
+    <pre><code>@article{romero2024eyesight,
+  title={Eyesight hand: Design of a fully-actuated dexterous robot hand with integrated vision-based tactile sensors and compliant actuation},
+  author={Romero, Branden and Fang, Hao-Shu and Agrawal, Pulkit and Adelson, Edward},
+  journal={arXiv preprint arXiv:2408.06265},
+  year={2024}
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Modified upon original <a href="https://nerfies.github.io/"> Nerfies </a> website (<a href="https://github.com/nerfies/nerfies.github.io">source</a>)</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
